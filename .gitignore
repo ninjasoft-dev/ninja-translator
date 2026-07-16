@@ -1,0 +1,30 @@
+# Ambiente Python
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.venv/
+venv/
+
+# Dados e saídas grandes
+data/
+saida/
+.cache/
+glossario/*.json
+!glossario/glossario_exemplo.json
+!glossario/noise_glossary_exemplo.json
+pandoc/
+
+# Benchmarks/avaliações locais gerados em runtime
+benchmark/e2e/
+benchmark/traducao/
+benchmark/refine/
+benchmark/literario/
+benchmark/*.pdf
+
+# Configuração local
+config.yaml
+config.yml
+.env
+.DS_Store
+Thumbs.db

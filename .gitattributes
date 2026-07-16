@@ -1,0 +1,10 @@
+* text eol=lf
+
+# Assets binários não devem passar por normalização de fim de linha.
+*.gif binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.png binary
+*.webp binary

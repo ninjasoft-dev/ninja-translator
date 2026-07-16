@@ -1,0 +1,8 @@
+google-genai
+customtkinter>=5.2,<6.0
+PyMuPDF
+reportlab
+pyphen
+requests
+sacrebleu>=2.0.0
+PyYAML>=6.0

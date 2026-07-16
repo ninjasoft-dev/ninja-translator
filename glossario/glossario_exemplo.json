@@ -1,0 +1,108 @@
+[
+  {
+    "term": "Hero's Party",
+    "translation": "Grupo do Herói",
+    "type": "organization",
+    "locked": false,
+    "notes": "Partido principal de aventureiros.",
+    "aliases": ["Hero Party", "Party of the Hero"]
+  },
+  {
+    "term": "Black Wolf",
+    "translation": "Lobo Negro",
+    "type": "creature",
+    "locked": false,
+    "notes": "Criatura comum em florestas sombrias."
+  },
+  {
+    "term": "Divine Beast",
+    "translation": "Fera Divina",
+    "type": "creature",
+    "locked": true,
+    "notes": "Entidade lendária guardiã das ruínas antigas."
+  },
+  {
+    "term": "Forbidden Magic",
+    "translation": "Magia Proibida",
+    "type": "magic",
+    "locked": false,
+    "notes": "Arcanismo vetado pelo reino devido ao alto risco."
+  },
+  {
+    "term": "Crimson Knight",
+    "translation": "Cavaleiro Carmesim",
+    "type": "title",
+    "locked": false,
+    "notes": "Título honorário concedido pela ordem real."
+  },
+  {
+    "term": "Royal Capital",
+    "translation": "Capital Real",
+    "type": "place",
+    "locked": true,
+    "notes": "Cidade principal do reino."
+  },
+  {
+    "term": "Sky Temple",
+    "translation": "Templo Celeste",
+    "type": "place",
+    "locked": false,
+    "notes": "Santuário acima das nuvens, acessível por portais."
+  },
+  {
+    "term": "Ancient Dragon",
+    "translation": "Dragão Ancestral",
+    "type": "creature",
+    "locked": false,
+    "notes": "Dragão antigo e sábio, raramente visto."
+  },
+  {
+    "term": "Silver Lance",
+    "translation": "Lança de Prata",
+    "type": "item",
+    "locked": false,
+    "notes": "Arma lendária que perfura qualquer armadura."
+  },
+  {
+    "term": "Saint's Blessing",
+    "translation": "Bênção do Santo",
+    "type": "magic",
+    "locked": false,
+    "notes": "Feitiço de cura e proteção, usado por clérigos."
+  },
+  {
+    "term": "Shadow Market",
+    "translation": "Mercado das Sombras",
+    "type": "place",
+    "locked": false,
+    "notes": "Feira clandestina com artefatos raros."
+  },
+  {
+    "term": "Azure Mage",
+    "translation": "Mago Celeste",
+    "type": "title",
+    "locked": false,
+    "notes": "Usuário especializado em magia de vento e céu."
+  },
+  {
+    "term": "Forest of Echoes",
+    "translation": "Floresta dos Ecos",
+    "type": "place",
+    "locked": false,
+    "notes": "Local onde vozes antigas podem ser ouvidas."
+  },
+  {
+    "term": "Kingdom Council",
+    "translation": "Conselho do Reino",
+    "type": "organization",
+    "locked": false,
+    "notes": "Grupo de nobres e sábios que decidem leis."
+  },
+  {
+    "term": "Starfall Festival",
+    "translation": "Festival da Queda das Estrelas",
+    "type": "event",
+    "locked": false,
+    "notes": "Celebração anual de meteoros e desejos."
+  }
+]

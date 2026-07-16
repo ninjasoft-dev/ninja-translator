@@ -1,0 +1,79 @@
+# Copie este arquivo para config.yaml e ajuste os valores ao seu ambiente.
+
+# Idioma de origem, backend e modelo de tradução
+source_language: auto                # auto | en | ja | ko | zh | es | fr | de | it | ru | ar ...
+translate_backend: ollama            # ollama | gemini | openai
+translate_model: gemma3:4b           # nome disponível no backend escolhido
+translate_temperature: 0.20
+translate_repeat_penalty: 1.10
+translate_chunk_chars: 2400
+translate_num_predict: 3072
+translate_num_ctx: null
+use_translation_repair: true
+translate_context_paragraphs: 3
+translate_context_chars: 1200
+translate_context_include_pt: true
+translate_dialogue_guardrails: strict # strict | relaxed | off
+translate_dialogue_retry_temps: [0.35, 0.20, 0.10]
+translate_dialogue_split_fallback: true
+translate_glossary_match_limit: 80
+translate_glossary_fallback_limit: 30
+
+# Normalização de quebras antes da tradução
+use_desquebrar: true
+desquebrar_backend: ollama
+desquebrar_model: gemma3:4b
+desquebrar_mode: safe                # safe | llm
+desquebrar_temperature: 0.08
+desquebrar_repeat_penalty: 1.08
+desquebrar_chunk_chars: 2400
+desquebrar_num_predict: 2048
+desquebrar_num_ctx: 4096
+
+# Pós-edição opcional
+refine_backend: ollama
+refine_model: gemma3:4b
+refine_temperature: 0.20
+refine_repeat_penalty: 1.08
+refine_chunk_chars: 2400
+refine_num_predict: 3072
+refine_num_ctx: 4096
+refine_guardrails: strict             # strict | relaxed | off
+refine_after_translate: false
+cleanup_before_refine: auto           # off | auto | on
+
+# Backends
+openai_base_url: "https://api.openai.com/v1"
+
+# Comportamento do backend local
+ollama_keep_alive: "30m"
+ollama_api_mode: chat                 # generate | chat
+ollama_think: false
+max_retries: 3
+initial_backoff: 1.5
+backoff_factor: 1.8
+request_timeout: 180
+fail_on_chunk_error: false
+
+# PDF: informe fontes existentes na máquina que executará o pipeline.
+pdf_enabled: false
+pdf_font:
+  file: ""
+  size: 12
+  leading: 15.0
+pdf_font_fallbacks: []
+pdf_margin: 48
+pdf_author: ""
+pdf_language: pt-BR
+
+# Filtros adicionais de marcas d'água locais. O arquivo real não deve ser versionado.
+preprocess_noise_glossary_path: null
+
+# Diagnóstico
+debug_max_chunks: null
+debug_max_chars_per_file: 200000
+debug_store_llm_raw: true
+
+data_dir: data
+output_dir: saida
+font_dir: .cache/fonts

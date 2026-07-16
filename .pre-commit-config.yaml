@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: Ruff lint
+        entry: ruff check
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: Ruff format
+        entry: ruff format --check
+        language: system
+        types: [python]
+      - id: mojibake-token-check
+        name: Block mojibake tokens
+        entry: python scripts/check_mojibake.py
+        language: python
+        files: "\\.(py|md|json)$"
+        pass_filenames: true

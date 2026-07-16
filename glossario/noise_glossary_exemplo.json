@@ -1,0 +1,23 @@
+{
+  "line_contains": [
+    "reader.example",
+    "downloads.example",
+    "sign up for our newsletter",
+    "thank you for reading",
+    "join our community server"
+  ],
+  "line_compact_contains": [
+    "readerexample",
+    "downloadsexample"
+  ],
+  "line_regex": [
+    "(?i)http[s]?://[^\\s]+",
+    "(?i)newsletter",
+    "(?i)download our app"
+  ],
+  "inline_regex": [
+    "(?i)reader\\.example",
+    "(?i)downloads\\.example"
+  ],
+  "max_line_len": 160
+}

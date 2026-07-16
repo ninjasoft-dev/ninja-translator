@@ -1,0 +1,17 @@
+[
+  {
+    "id": "sample_1",
+    "source": "The cafeteria was half empty when Maya leaned over the table. \"Are you really going to confess to him now?\" she whispered.\\n\\nLena sipped her coffee, stalling. \"If I don't do it before finals, I'll explode.\"\\n\\nA student dropped his tray nearby, making a thunderous crash. Maya sighed. \"Great timing. Even the universe is nervous for you.\"",
+    "reference": "A cafeteria estava quase vazia quando Maya se inclinou sobre a mesa. \"Você vai mesmo se declarar para ele agora?\", ela sussurrou.\\n\\nLena tomou um gole de café, ganhando tempo. \"Se eu não fizer isso antes das provas finais, vou explodir.\"\\n\\nUm estudante derrubou sua bandeja ali perto, fazendo um estrondo. Maya suspirou. \"Ótimo timing. Até o universo está nervoso por você.\""
+  },
+  {
+    "id": "sample_2",
+    "source": "Night settled over the harbor, folding the boats in a soft, blue haze. Elias walked the pier counting the boards that creaked under his boots.\\n\\nHe pretended not to hear the gulls arguing overhead; pretending was the only way to keep the memories quiet.\\n\\nWhen the lighthouse beam swept past, he saluted it like an old friend and kept moving.",
+    "reference": "A noite caiu sobre o porto, embrulhando os barcos numa névoa azul suave. Elias caminhava pelo píer, contando as tábuas que rangiam sob suas botas.\\n\\nEle fingia não ouvir as gaivotas discutindo lá em cima; fingir era o único jeito de manter as lembranças quietas.\\n\\nQuando o facho do farol passou, ele o saudou como um velho amigo e continuou em frente."
+  },
+  {
+    "id": "sample_3",
+    "source": "The tavern roared with laughter after Kaito's joke about the dragon who burned his own tax forms. \"Even dragons hate paperwork,\" he claimed, wiping tears from his eyes.\\n\\nThe bard tapped his lute and added, \"But the auditors still want their share.\"\\n\\nA barmaid rolled her eyes. \"You two are banned from comedy night,\" she said, trying not to smile.",
+    "reference": "A taverna explodiu em risadas depois da piada de Kaito sobre o dragão que queimou seus próprios formulários de impostos. \"Até dragões odeiam papelada\", ele disse, enxugando as lágrimas.\\n\\nO bardo dedilhou o alaúde e acrescentou: \"Mas os auditores ainda querem a parte deles.\"\\n\\nUma garçonete revirou os olhos. \"Vocês dois estão banidos da noite de comédia\", disse ela, tentando não rir."
+  }
+]
