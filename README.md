@@ -23,6 +23,32 @@ Pipeline em Python 3.10+ para traduzir PDFs e Markdown de inglês, japonês, cor
   ```
 Todas as fontes são UTF-8 (ver testes e hook de mojibake). Use editor com UTF-8.
 
+## Hardware e modos de execução
+
+Uma placa NVIDIA RTX não é obrigatória. O hardware necessário depende do
+backend, do modelo, da quantização e do tamanho de contexto escolhidos. O
+`config.example.yaml` usa `gemma3:4b`, um ponto de partida mais acessível para
+execução local.
+
+| Cenário | Configuração prática | Observações |
+| --- | --- | --- |
+| Gemini ou OpenAI | CPU atual, 8 GB de RAM e conexão com a internet | Não exige GPU dedicada; os chunks são enviados ao provedor selecionado. |
+| Ollama somente em CPU | 16 GB de RAM | É suportado, mas tende a ser consideravelmente mais lento em livros longos. |
+| Ollama local de entrada | 16 GB de RAM e GPU compatível com 6–8 GB de VRAM | Faixa adequada para começar com modelos quantizados em torno de 4B e contexto de aproximadamente 4k. |
+| Ollama local recomendado | 32 GB de RAM e GPU compatível com 12 GB ou mais de VRAM | Oferece mais margem para modelos de 8B–14B, contextos maiores e etapas de reparo/refino. |
+| Modelos locais de 20B ou mais | 64 GB de RAM e/ou 20–24 GB de VRAM | Pode exigir offload parcial para CPU; consumo e velocidade variam bastante entre modelos e quantizações. |
+
+Essas faixas são referências práticas, não requisitos rígidos. Uma NVIDIA RTX
+compatível é uma boa opção para acelerar o Ollama no Windows, mas o runtime
+também aceita execução em CPU e oferece suporte a GPUs AMD e Apple Metal. Em
+qualquer plataforma, confirme a compatibilidade na
+[documentação de hardware do Ollama](https://docs.ollama.com/gpu).
+
+O consumo de memória cresce com o modelo e com `*_num_ctx`. Antes de iniciar um
+livro completo, faça um teste com poucos chunks e use `ollama ps` para verificar
+se o modelo ficou em GPU, CPU ou dividido entre ambos. Reduza o modelo ou o
+contexto se houver offload excessivo, falta de memória ou desempenho inviável.
+
 ## Interface gráfica
 
 A interface desktop oferece seleção de arquivos, idioma, backend, modelo,
@@ -267,3 +293,13 @@ Converte um `.md` em PDF com as configs de fonte/margem do `config.yaml`.
 ## Licença
 
 Distribuído sob a licença MIT. Consulte [LICENSE](LICENSE).
+
+A escolha é intencional: qualquer pessoa pode usar, copiar, modificar,
+redistribuir, sublicenciar ou incorporar o código em outro projeto, inclusive
+comercial, desde que preserve o aviso de copyright e o texto da licença. A MIT
+não obriga a publicação das modificações feitas por terceiros.
+
+A licença cobre o código deste repositório. Modelos, APIs, fontes e documentos
+processados continuam sujeitos às licenças, aos termos de uso e aos direitos
+autorais de seus respectivos responsáveis. O usuário deve ter autorização para
+processar e traduzir o conteúdo de entrada.
