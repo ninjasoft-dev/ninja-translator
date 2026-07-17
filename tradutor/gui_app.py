@@ -57,13 +57,21 @@ DESQUEBRAR_LABELS = {
 }
 
 
+def resolve_appearance_mode(value: str | None) -> str:
+    """Normaliza o tema inicial, usando o modo escuro como fallback seguro."""
+    normalized_value = (value or "").strip().lower()
+    return normalized_value if normalized_value in {"dark", "light"} else "dark"
+
+
 class TranslatorApp(ctk.CTk):
     """Janela principal para configurar, executar e acompanhar traduções."""
 
     def __init__(self) -> None:
         """Carrega a configuração local e constrói a janela principal."""
-        ctk.set_appearance_mode("dark")
+        initial_theme = resolve_appearance_mode(os.getenv("NINJA_TRANSLATOR_THEME"))
+        ctk.set_appearance_mode(initial_theme)
         super().__init__(fg_color=COLORS["bg"])
+        self.initial_theme = initial_theme
         self.config_data = self._load_project_config()
         self.message_queue: queue.Queue[tuple[str, object]] = queue.Queue()
         self.process: subprocess.Popen[str] | None = None
@@ -92,6 +100,13 @@ class TranslatorApp(ctk.CTk):
     @staticmethod
     def _load_project_config() -> AppConfig:
         """Lê a configuração do repositório, mesmo quando a GUI parte de outra pasta."""
+        configured_path = os.getenv("NINJA_TRANSLATOR_CONFIG")
+        if configured_path:
+            config_path = Path(configured_path).expanduser()
+            if not config_path.is_absolute():
+                config_path = PROJECT_ROOT / config_path
+            return load_config(config_path)
+
         config_path = PROJECT_ROOT / "config.yaml"
         return load_config(config_path if config_path.exists() else None)
 
@@ -129,7 +144,7 @@ class TranslatorApp(ctk.CTk):
         self.pdf_var = ctk.BooleanVar(value=self.config_data.pdf_enabled)
         self.resume_var = ctk.BooleanVar(value=False)
         self.debug_var = ctk.BooleanVar(value=False)
-        self.theme_var = ctk.StringVar(value="dark")
+        self.theme_var = ctk.StringVar(value=self.initial_theme)
         self.desquebrar_var = ctk.StringVar(value="LLM · melhor acabamento")
         if self.config_data.desquebrar_mode == "safe":
             self.desquebrar_var.set("Seguro · sem chamada extra")

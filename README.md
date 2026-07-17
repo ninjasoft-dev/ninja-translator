@@ -56,13 +56,19 @@ glossário e acabamento final, além de logs em tempo real e cancelamento seguro
 Ela usa a mesma CLI por baixo dos panos, portanto gera os mesmos caches,
 relatórios e saídas auditáveis do fluxo por comando.
 
-![Interface desktop do Ninja Translator](docs/assets/ninja-translator-interface.png)
+![Interface desktop do Ninja Translator](docs/assets/ninja-translator-escuro.png)
 
 ```bash
 python interface.py
 
 # Forma equivalente
 python -m tradutor.gui
+```
+
+No Windows, as capturas dos temas claro e escuro podem ser recriadas com:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\capture_screenshots.ps1
 ```
 
 As chaves de Gemini e OpenAI informadas na tela são repassadas apenas ao
