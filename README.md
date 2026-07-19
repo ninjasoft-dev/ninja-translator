@@ -1,4 +1,4 @@
-# Ninja Translator
+# NinjaSoft Translator
 
 Tradutor multilíngue de Light Novels e documentos para PT-BR.
 
@@ -56,7 +56,7 @@ glossário e acabamento final, além de logs em tempo real e cancelamento seguro
 Ela usa a mesma CLI por baixo dos panos, portanto gera os mesmos caches,
 relatórios e saídas auditáveis do fluxo por comando.
 
-![Interface desktop do Ninja Translator](docs/assets/ninja-translator-escuro.png)
+![Interface desktop do NinjaSoft Translator](docs/assets/ninja-translator-escuro.png)
 
 ```bash
 python interface.py

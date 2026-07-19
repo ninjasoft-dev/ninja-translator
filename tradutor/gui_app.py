@@ -84,7 +84,7 @@ class TranslatorApp(ctk.CTk):
             "openai": "",
         }
 
-        self.title("Ninja Translator · NinjaSoft")
+        self.title("NinjaSoft Translator")
         self.geometry("1180x820")
         self.minsize(1020, 720)
         self.grid_columnconfigure(1, weight=1)
@@ -185,7 +185,7 @@ class TranslatorApp(ctk.CTk):
 
         ctk.CTkLabel(
             sidebar,
-            text="NINJA TRANSLATOR",
+            text="NINJASOFT TRANSLATOR",
             font=ctk.CTkFont(size=11, weight="bold"),
             text_color=COLORS["accent"],
         ).grid(row=1, column=0, padx=31, pady=(0, 36), sticky="w")

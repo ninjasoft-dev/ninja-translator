@@ -40,7 +40,7 @@ function Save-TranslatorScreenshot {
             Start-Sleep -Milliseconds 200
             $windowProcess = Get-Process pythonw -ErrorAction SilentlyContinue | Where-Object {
                 $_.StartTime -ge $startedAt.AddSeconds(-1) -and
-                $_.MainWindowTitle -like "Ninja Translator*"
+                $_.MainWindowTitle -like "NinjaSoft Translator*"
             } | Select-Object -First 1
             if ($windowProcess) { break }
         }
